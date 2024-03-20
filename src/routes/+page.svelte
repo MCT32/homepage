@@ -17,7 +17,7 @@
 
 
 <style lang="postcss">
-    :global(html) {
+    :global(body) {
         background-color: theme('colors.zinc.800');
     }
 </style>
