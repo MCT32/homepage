@@ -4,6 +4,10 @@
 </script>
 
 
+<head>
+    <title>MCT32.xyz</title>
+</head>
+
 <p class="text-white text-3xl p-10 font-semibold max-w-[40rem]">
     Hello! I'm <Popout href="https://github.com/MCT32">MCT32</Popout>, a developer who can't seem to finish his projects...
     <br>
