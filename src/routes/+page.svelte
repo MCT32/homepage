@@ -4,7 +4,7 @@
 </script>
 
 
-<p class="text-white text-3xl p-10 font-semibold" style="width: 26em;">
+<p class="text-white text-3xl p-10 font-semibold max-w-[40rem]">
     Hello! I'm <Popout href="https://github.com/MCT32">MCT32</Popout>, a developer who can't seem to finish his projects...
     <br>
     I work on a bunch of different types of projects. I've done some web stuff, system programing languages stuff, and even some Minecraft modding.
