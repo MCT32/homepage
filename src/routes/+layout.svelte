@@ -3,16 +3,23 @@
 </script>
 
 
+<svelte:head>
+    <meta property="og:title" content="MCT32.xyz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mct32.xyz/" />
+    <meta property="og:image" content="https://mct32.xyz/pfpv3.png" />
+</svelte:head>
+
 <div class="relative min-h-screen">
     <nav class="shadow-xl p-2.5 flex items-center gap-x-10 sticky top-0 w-full bg-zinc-800">
-    <h1 class="text-white font-extrabold text-5xl w-fit"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
+        <h1 class="text-white font-extrabold text-5xl w-fit"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
 
-    <a href="/" class="w-fit text-white font-semibold">Home</a>
-    <a href="/projects" class="w-fit text-white font-semibold">Projects</a>
-    <a href="/about" class="w-fit text-white font-semibold">About</a>
+        <a href="/" class="w-fit text-white font-semibold">Home</a>
+        <a href="/projects" class="w-fit text-white font-semibold">Projects</a>
+        <a href="/about" class="w-fit text-white font-semibold">About</a>
     </nav>
 
     <div>
-    <slot />
+        <slot />
     </div>
 </div>
