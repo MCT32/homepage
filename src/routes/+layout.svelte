@@ -8,6 +8,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mct32.xyz/" />
     <meta property="og:image" content="https://mct32.xyz/pfpv3.png" />
+    <meta property="og:description" content="Hello! I'm MCT32, a developer who can't seem to finish his projects... I work on a bunch of different types of projects. I've done some web stuff, system programing languages stuff, and even some Minecraft modding. My favorite language right now is Rust." />
 </svelte:head>
 
 <div class="relative min-h-screen">
