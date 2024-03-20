@@ -5,9 +5,9 @@
 
 <a href={href} class="underline hover:scale-125 hover:bg-white hover:text-zinc-800 hover:rotate-6 rounded transition-all inline-block">
     <slot />
-</a>
+</a><!--
 
-<img class="ferris transition-all" src="https://www.rustacean.net/assets/rustacean-flat-happy.svg" alt="Ferris">
+--><img class="ferris transition-all" src="https://www.rustacean.net/assets/rustacean-flat-happy.svg" alt="Ferris">
 
 
 <style lang="postcss">
