@@ -13,10 +13,10 @@
 </svelte:head>
 
 <div class="relative min-h-screen">
-    <nav class="shadow-xl flex items-center gap-x-10 sticky top-0 w-full bg-zinc-800 h-16">
+    <nav class="shadow-xl flex items-center sticky top-0 w-full bg-zinc-800 h-16">
         <h1 class="text-white font-extrabold text-5xl w-fit px-2.5"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
 
-        <div class="md:flex gap-x-10 hidden">
+        <div class="md:flex gap-x-10 hidden ml-10">
             <a href="/" class="w-fit text-white font-semibold">Home</a>
             <a href="/projects" class="w-fit text-white font-semibold">Projects</a>
             <a href="/about" class="w-fit text-white font-semibold">About</a>
