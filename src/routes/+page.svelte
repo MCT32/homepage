@@ -20,7 +20,7 @@
     <title>MCT32.xyz</title>
 </svelte:head>
 
-<div class="w-3/4 mx-auto my-[10vw] text-center relative">
+<div class="w-3/4 mx-auto my-[10vw] text-center relative -z-10">
     <img src="/minecraft_title.png" alt="Minecraft-style title">
     <div class="splash-container">
         <span class="splash">{splash}</span>
