@@ -41,7 +41,7 @@
         overflow-x: hidden;
     }
 
-    @font-face { font-family: Minecraftia; src: url('Minecraftia.ttf'); } 
+    @font-face { font-family: Minecraftia; src: url('/Minecraftia.ttf'); } 
 
     @keyframes pulse {
         0% {
