@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../app.css";
-    import PhCaretDown from "virtual:icons/ph/caret-down-bold";
+    import PhCaretLeft from "virtual:icons/ph/caret-left-bold";
 </script>
 
 
@@ -13,8 +13,8 @@
 </svelte:head>
 
 <div class="relative min-h-screen">
-    <nav class="shadow-xl p-2.5 flex items-center gap-x-10 sticky top-0 w-full bg-zinc-800">
-        <h1 class="text-white font-extrabold text-5xl w-fit"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
+    <nav class="shadow-xl flex items-center gap-x-10 sticky top-0 w-full bg-zinc-800 h-16">
+        <h1 class="text-white font-extrabold text-5xl w-fit px-2.5"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
 
         <div class="md:flex gap-x-10 hidden">
             <a href="/" class="w-fit text-white font-semibold">Home</a>
@@ -22,7 +22,17 @@
             <a href="/about" class="w-fit text-white font-semibold">About</a>
         </div>
 
-        <PhCaretDown class="ml-auto mr-10 text-white md:hidden" />
+        <div class="ml-auto md:hidden group">
+            <button class="h-16 w-16 flex justify-center items-center">
+                <PhCaretLeft class="text-white" />
+            </button>
+
+            <div class="group-hover:block group-hover:translate-x-0 translate-x-full transition-all absolute bg-zinc-800 group-hover:shadow-xl w-64 right-0 text-2xl text-white font-semibold px-6">
+                <a href="/" class="block py-3">Home</a>
+                <a href="/projects" class="block py-3">Projects</a>
+                <a href="/about" class="block py-3">About</a>
+            </div>
+        </div>
     </nav>
 
     <div>
