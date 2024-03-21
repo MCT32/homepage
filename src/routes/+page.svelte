@@ -19,5 +19,6 @@
 <style lang="postcss">
     :global(body) {
         background-color: theme('colors.zinc.800');
+        overflow-x: hidden;
     }
 </style>
