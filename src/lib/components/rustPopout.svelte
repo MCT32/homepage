@@ -15,7 +15,7 @@
         opacity: 0;
         display: inline;
         width: 4rem;
-        position: fixed;
+        position: absolute;
         transform: translate(0.5em, 1em);
     }
 
