@@ -27,7 +27,7 @@
                 <PhCaretLeft class="text-white" />
             </button>
 
-            <div class="group-hover:block group-hover:translate-x-0 translate-x-full transition-all absolute bg-zinc-800 group-hover:shadow-xl w-64 right-0 text-2xl text-white font-semibold px-6">
+            <div class="group-hover:w-64 w-0 group-hover:px-6 px-0 overflow-hidden transition-all absolute bg-zinc-800 shadow-xl right-0 text-2xl text-white font-semibold">
                 <a href="/" class="block py-3">Home</a>
                 <a href="/projects" class="block py-3">Projects</a>
                 <a href="/about" class="block py-3">About</a>
