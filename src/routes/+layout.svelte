@@ -22,7 +22,7 @@
             <a href="/about" class="w-fit text-white font-semibold">About</a>
         </div>
 
-        <div class="ml-auto md:hidden group">
+        <div class="ml-auto md:hidden group overflow-x-hidden">
             <button class="h-16 w-16 flex justify-center items-center">
                 <PhCaretLeft class="text-white" />
             </button>
