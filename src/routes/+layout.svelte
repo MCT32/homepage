@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
     import "../app.css";
+    import PhCaretDown from "virtual:icons/ph/caret-down-bold";
 </script>
 
 
@@ -20,6 +21,8 @@
             <a href="/projects" class="w-fit text-white font-semibold">Projects</a>
             <a href="/about" class="w-fit text-white font-semibold">About</a>
         </div>
+
+        <PhCaretDown class="ml-auto mr-10 text-white md:hidden" />
     </nav>
 
     <div>
