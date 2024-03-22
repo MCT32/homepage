@@ -10,6 +10,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
+		"@iconify-json/logos": "^1.1.42",
 		"@iconify-json/ph": "^1.1.11",
 		"@sveltejs/adapter-node": "^5.0.1",
 		"@sveltejs/kit": "^2.0.0",

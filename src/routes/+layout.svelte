@@ -1,6 +1,7 @@
 <script lang="ts">
     import "../app.css";
     import PhCaretLeft from "virtual:icons/ph/caret-left-bold";
+    import SvelteLogo from "virtual:icons/logos/svelte-icon";
 </script>
 
 
@@ -12,7 +13,7 @@
     <meta property="og:description" content="Hello! I'm MCT32, a developer who can't seem to finish his projects... I work on a bunch of different types of projects. I've done some web stuff, system programing languages stuff, and even some Minecraft modding. My favorite language right now is Rust." />
 </svelte:head>
 
-<div class="relative min-h-screen">
+<div class="relative min-h-screen pb-10">
     <nav class="shadow-xl flex items-center sticky top-0 w-full bg-zinc-800 h-16">
         <h1 class="text-white font-extrabold text-5xl w-fit px-2.5"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
 
@@ -38,4 +39,8 @@
     <div>
         <slot />
     </div>
+
+    <footer class="bg-zinc-900 text-white text-center py-3 absolute bottom-0 w-full">
+        Made with Svelte • <SvelteLogo class="inline" />
+    </footer>
 </div>
