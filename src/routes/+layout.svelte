@@ -15,7 +15,7 @@
 
 <div class="relative min-h-screen pb-10">
     <nav class="shadow-xl flex items-center sticky top-0 w-full bg-zinc-800 h-16">
-        <h1 class="text-white font-extrabold text-5xl w-fit px-2.5"><a href="https://mct32.xyz">MCT32.xyz</a></h1>
+        <span class="text-white font-extrabold text-5xl w-fit px-2.5"><a href="https://mct32.xyz">MCT32.xyz</a></span>
 
         <div class="md:flex gap-x-10 hidden ml-10">
             <a href="/" class="w-fit text-white font-semibold">Home</a>

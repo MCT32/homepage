@@ -36,11 +36,6 @@
 
 
 <style lang="postcss">
-    :global(body) {
-        background-color: theme('colors.zinc.800');
-        overflow-x: hidden;
-    }
-
     @font-face { font-family: Minecraftia; src: url('/Minecraftia.ttf'); } 
 
     @keyframes pulse {
