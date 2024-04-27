@@ -1,6 +1,7 @@
 <script lang="ts">
     import Popout from "$lib/components/popout.svelte";
     import RustPopout from "$lib/components/rustPopout.svelte";
+    import Cube from "$lib/components/cube.svelte";
 
 
     let splashes = [
@@ -20,19 +21,18 @@
     <title>MCT32.xyz</title>
 </svelte:head>
 
-<div class="w-3/4 mx-auto my-[10vw] text-center relative -z-10">
-    <img src="/minecraft_title.png" alt="Minecraft-style title">
-    <div class="splash-container">
-        <span class="splash">{splash}</span>
+<div class="bg-zinc-800 p-24">
+    <div class="flex">
+        <p class="text-white text-5xl p-10 font-semibold grow">
+            Hello! I'm <Popout href="https://github.com/MCT32">MCT32</Popout>, a developer who can't seem to finish his projects...
+            <br>
+            I work on a bunch of different types of projects. I've done some web stuff, system programing languages stuff, and even some Minecraft modding.
+            My favorite language right now is <RustPopout href="https://www.rust-lang.org/">Rust</RustPopout>.
+        </p>
+
+        <Cube />
     </div>
 </div>
-
-<p class="text-white text-3xl p-10 font-semibold max-w-[40rem]">
-    Hello! I'm <Popout href="https://github.com/MCT32">MCT32</Popout>, a developer who can't seem to finish his projects...
-    <br>
-    I work on a bunch of different types of projects. I've done some web stuff, system programing languages stuff, and even some Minecraft modding.
-    My favorite language right now is <RustPopout href="https://www.rust-lang.org/">Rust</RustPopout>.
-</p>
 
 
 <style lang="postcss">

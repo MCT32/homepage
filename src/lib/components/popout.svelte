@@ -3,6 +3,6 @@
 </script>
 
 
-<a href={href} class="underline hover:scale-125 hover:bg-white hover:text-zinc-800 hover:rotate-6 rounded transition-all inline-block">
+<a href={href} class="hover:scale-125 hover:rotate-6 rounded transition-all inline-block text-transparent bg-gradient-to-b bg-clip-text from-green-400 to-green-700">
     <slot />
 </a>

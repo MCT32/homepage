@@ -15,7 +15,4 @@
     a {
         @apply font-semibold;
     }
-    body {
-        @apply bg-zinc-800;
-    }
 }

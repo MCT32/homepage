@@ -2,6 +2,8 @@
     import "../app.css";
     import PhCaretLeft from "virtual:icons/ph/caret-left-bold";
     import SvelteLogo from "virtual:icons/logos/svelte-icon";
+    import NavItem from "$lib/components/navItem.svelte";
+    import MobileNavItem from "$lib/components/mobileNavItem.svelte";
 </script>
 
 
@@ -15,12 +17,12 @@
 
 <div class="relative min-h-screen pb-10">
     <nav class="shadow-xl flex items-center sticky top-0 w-full bg-zinc-800 h-16">
-        <span class="text-white font-extrabold text-5xl w-fit px-2.5"><a href="https://mct32.xyz">MCT32.xyz</a></span>
+        <span class="text-transparent bg-gradient-to-br bg-clip-text from-green-400 to-green-600 font-extrabold text-5xl w-fit px-2.5">MCT32.XYZ</span>
 
-        <div class="md:flex gap-x-10 hidden ml-10">
-            <a href="/" class="w-fit text-white font-semibold">Home</a>
-            <a href="/projects" class="w-fit text-white font-semibold">Projects</a>
-            <a href="/about" class="w-fit text-white font-semibold">About</a>
+        <div class="md:flex hidden ml-10 text-lg h-full">
+            <NavItem name="Home" href="/" />
+            <NavItem name="Projects" href="/projects" />
+            <NavItem name="About" href="/about" />
         </div>
 
         <div class="ml-auto md:hidden group overflow-x-hidden">
@@ -28,17 +30,15 @@
                 <PhCaretLeft class="text-white" />
             </button>
 
-            <div class="group-hover:w-64 w-0 group-hover:px-6 px-0 overflow-hidden transition-all absolute bg-zinc-800 shadow-xl right-0 text-2xl text-white font-semibold">
-                <a href="/" class="block py-3">Home</a>
-                <a href="/projects" class="block py-3">Projects</a>
-                <a href="/about" class="block py-3">About</a>
+            <div class="group-hover:w-36 w-0 group-hover:px-6 px-0 overflow-hidden transition-all absolute bg-zinc-800 shadow-xl right-0 text-2xl font-semibold">
+                <MobileNavItem name="Home" href="/" />
+                <MobileNavItem name="Projects" href="/projects" />
+                <MobileNavItem name="About" href="/about" />
             </div>
         </div>
     </nav>
 
-    <div>
-        <slot />
-    </div>
+    <slot />
 
     <footer class="bg-zinc-900 text-white text-center py-3 absolute bottom-0 w-full">
         Made with Svelte • <SvelteLogo class="inline" />
