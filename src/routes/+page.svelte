@@ -4,9 +4,7 @@
 
 
     let splashes = [
-        "11/10 cock",
         "Free Randall Thymes!",
-        "Fuck you Nvidia!",
         "Arch btw",
         "Hello, World!",
         "Are you a robot?"
