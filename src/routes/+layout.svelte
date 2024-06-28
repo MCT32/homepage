@@ -5,8 +5,6 @@
     import NavItem from "$lib/components/navItem.svelte";
     import MobileNavItem from "$lib/components/mobileNavItem.svelte";
 
-    import 
-
     function animate() {
         let element = document.getElementById("vending");
         element?.classList.remove("anim");
