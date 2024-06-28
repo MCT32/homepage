@@ -16,3 +16,9 @@
         @apply font-semibold;
     }
 }
+
+@layer utilities {
+    .pixelated {
+        image-rendering: pixelated;
+    }
+}

@@ -4,6 +4,15 @@
     import SvelteLogo from "virtual:icons/logos/svelte-icon";
     import NavItem from "$lib/components/navItem.svelte";
     import MobileNavItem from "$lib/components/mobileNavItem.svelte";
+
+    import 
+
+    function animate() {
+        let element = document.getElementById("vending");
+        element?.classList.remove("anim");
+        void element?.offsetWidth;
+        element?.classList.add("anim");
+    }
 </script>
 
 
@@ -40,7 +49,28 @@
 
     <slot />
 
-    <footer class="bg-zinc-900 text-white text-center py-3 absolute bottom-0 w-full">
+    <footer class="bg-zinc-900 text-white text-center absolute py-3 bottom-0 w-full">
+        <img src="/vending.png" id="vending" on:click={animate} class="absolute -translate-y-full w-28 top-0 right-24 pixelated anim">
+
         Made with Svelte • <SvelteLogo class="inline" />
     </footer>
 </div>
+
+<style lang="postcss">
+    @keyframes bounce {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(-150%);
+        }
+    }
+
+    .anim {
+        animation: bounce 0.5s forwards;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 2;
+    }
+</style>
