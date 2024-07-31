@@ -22,7 +22,7 @@
     <meta property="og:description" content="Hello! I'm MCT32, a developer who can't seem to finish his projects... I work on a bunch of different types of projects. I've done some web stuff, system programing languages stuff, and even some Minecraft modding. My favorite language right now is Rust." />
 </svelte:head>
 
-<div class="relative min-h-screen pb-10">
+<div class="relative min-h-screen pb-10 flex flex-col">
     <nav class="shadow-xl flex items-center sticky top-0 w-full bg-zinc-800 h-16">
         <span class="text-transparent bg-gradient-to-br bg-clip-text from-green-400 to-green-600 font-extrabold text-5xl w-fit px-2.5">MCT32.XYZ</span>
 
@@ -48,27 +48,10 @@
     <slot />
 
     <footer class="bg-zinc-900 text-white text-center absolute py-3 bottom-0 w-full">
-        <img src="/vending.png" id="vending" on:click={animate} class="absolute -translate-y-full w-28 top-0 right-24 pixelated anim">
-
         Made with Svelte • <SvelteLogo class="inline" />
     </footer>
 </div>
 
 <style lang="postcss">
-    @keyframes bounce {
-        from {
-            transform: translateY(-100%);
-        }
-
-        to {
-            transform: translateY(-150%);
-        }
-    }
-
-    .anim {
-        animation: bounce 0.5s forwards;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 2;
-    }
+    
 </style>
