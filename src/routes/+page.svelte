@@ -1,6 +1,7 @@
 <script lang="ts">
     import Popout from "$lib/components/popout.svelte";
     import RustPopout from "$lib/components/rustPopout.svelte";
+    import GithubGroup from "$lib/components/githubGroup.svelte";
 
 
     let splashes = [
@@ -29,6 +30,8 @@
             My favorite language right now is <RustPopout href="https://www.rust-lang.org/">Rust</RustPopout>.
         </p>
     </div>
+
+    <GithubGroup username="MCT32" />
 </div>
 
 
