@@ -21,7 +21,7 @@
 
         <div class="md:flex hidden ml-10 text-lg h-full">
             <NavItem name="Home" href="/" />
-            <NavItem name="Projects" href="/projects" />
+            <NavItem name="Blogs" href="/blogs" />
             <NavItem name="Contact" href="/contact" />
         </div>
 
@@ -32,7 +32,7 @@
 
             <div class="group-hover:w-36 w-0 group-hover:px-6 px-0 overflow-hidden transition-all absolute bg-zinc-800 shadow-xl right-0 text-2xl font-semibold">
                 <MobileNavItem name="Home" href="/" />
-                <MobileNavItem name="Projects" href="/projects" />
+                <MobileNavItem name="Blogs" href="/blogs" />
                 <MobileNavItem name="Contact" href="/contact" />
             </div>
         </div>
