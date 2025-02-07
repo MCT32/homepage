@@ -4,13 +4,6 @@
     import SvelteLogo from "virtual:icons/logos/svelte-icon";
     import NavItem from "$lib/components/navItem.svelte";
     import MobileNavItem from "$lib/components/mobileNavItem.svelte";
-
-    function animate() {
-        let element = document.getElementById("vending");
-        element?.classList.remove("anim");
-        void element?.offsetWidth;
-        element?.classList.add("anim");
-    }
 </script>
 
 
@@ -29,7 +22,7 @@
         <div class="md:flex hidden ml-10 text-lg h-full">
             <NavItem name="Home" href="/" />
             <NavItem name="Projects" href="/projects" />
-            <NavItem name="About" href="/about" />
+            <NavItem name="Contact" href="/contact" />
         </div>
 
         <div class="ml-auto md:hidden group overflow-x-hidden">
@@ -40,7 +33,7 @@
             <div class="group-hover:w-36 w-0 group-hover:px-6 px-0 overflow-hidden transition-all absolute bg-zinc-800 shadow-xl right-0 text-2xl font-semibold">
                 <MobileNavItem name="Home" href="/" />
                 <MobileNavItem name="Projects" href="/projects" />
-                <MobileNavItem name="About" href="/about" />
+                <MobileNavItem name="Contact" href="/contact" />
             </div>
         </div>
     </nav>
