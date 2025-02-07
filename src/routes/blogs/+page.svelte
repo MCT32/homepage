@@ -3,6 +3,12 @@
 
     let blogs = [
         {
+            link: "/blogs/cloak-shader",
+            title: "Spy Cloak Shader",
+            description: "Reverse engineering and recreating the Spy's cloak shader in Unity",
+            tags: ["unity", "shaders"]
+        },
+        {
             link: "/blogs/test",
             title: "Test",
             description: "Lorem ipsum odor amet, consectetuer adipiscing elit.",
