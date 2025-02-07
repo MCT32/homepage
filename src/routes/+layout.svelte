@@ -45,7 +45,9 @@
         </div>
     </nav>
 
-    <slot />
+    <div class="bg-zinc-800 p-24 flex-grow">
+        <slot />
+    </div>
 
     <footer class="bg-zinc-900 text-white text-center absolute py-3 bottom-0 w-full">
         Made with Svelte • <SvelteLogo class="inline" />
