@@ -3,6 +3,13 @@
 
     let blogs = [
         {
+            link: "/blogs/dithering-shader",
+            title: "Dithering Shader",
+            description: "Unity shader with a stylised dithering effect.",
+            image: "",
+            tags: ["unity", "shader", "graphics"]
+        },
+        {
             link: "/blogs/test",
             title: "Test",
             description: "Lorem ipsum odor amet, consectetuer adipiscing elit.",
