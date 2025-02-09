@@ -135,3 +135,61 @@ fixed4 frag (v2f i) : SV_Target
 And the new result:
 
 ![Demonstrating the effect of the diffuse size slider](/blogs/dithering-shader/diffuse-size.gif "Diffuse size slider")
+
+## Dithering effect
+
+Not that we have our base shader lighting, we can not start work on making the actual dithering shader. Before we can do that, we need to understand how dithering works. The type of dithering we will be using is ordered dithering, as it creates the stylised effect that I want. Ordered dithering works by overlaying a tiled threshold map over what is being rendered and then comparing the color with the threshold to decide what the resulting color should be. This might be a little hard to understand, but it becomes a lot simpler with grayscale instead of color, and using only 2 shades. As an example, lets say that our threshold map is simply one color, half brightness gray, halfway between white and black.
+For this example, the left side is the color we will be converting, the middle is the threshold, and the right is the resulting quantised result. Here, the input shade on the left is darker than the threshold in the middle, so the result gets "rounded down" to black.
+
+![Input darker than threshold, resulting in rounding down](/blogs/dithering-shader/threshold-darker.png "Threshold comparison")
+
+Using the same threshold, this next example has the input color brighter then the threshold, so the color is "rounded up" to white.
+
+![Input lighter than threshold, resulting in rounding up](/blogs/dithering-shader/threshold-lighter.png "Threshold comparison")
+
+This might be a confusing explaination, so here is another representation. The top strip in this image represents then input shade, and the bottom strip is the result. in this case, since the entire map is one color, the result is just black and white split in the middle.
+
+![Only 2 colors and no dithering](/blogs/dithering-shader/grad-no-map.png "Undithered gradient map")
+
+Now with this information, lets impliment this in our shader.
+
+```hlsl
+fixed4 frag (v2f i) : SV_Target
+{
+    // Compute the diffuse
+    float diffuse = dot(ObjSpaceLightDir(i.vertex), i.normal);
+
+    diffuse -= 1;               // Subtract by one to value can be scaled from the upper bound
+    diffuse /= _DiffuseSize;    // Inversely cale the diffuse based on the _DiffuseSize property
+    diffuse += 1;               // Return bounds back to normal after scaling
+
+    // Compare input with threshold to get result. 0.5 is our threshold // [!code highlight:2]
+    diffuse = diffuse > 0.5 ? 1 : 0;
+
+    fixed4 col;
+    col.rgb = float3(diffuse, diffuse, diffuse);    // Add the diffuse to the color as grayscale
+    col.a = 1;                                      // Set alpha to full
+
+    return col;
+}
+```
+
+And here is the result:
+
+![Shader without dithering, resulting in 2 distinct colors](/blogs/dithering-shader/no-dithering.png "Undithered shader")
+
+Ok, the result isn't very flattering, but thats to be expected. Since there is no threshold map, to just rounds all the shades up or down, resulting in 2 clearly visible colors. Now that that's out of the way, let's look at how we can use a threshold map to acheive the result we want.
+
+### Threshold map
+
+There are many types of threshold maps that can be used, all with different looking results. The threshold map we will be using is the Bayer matrix. It's likely the most common threshold map to be used with ordered dithering, it creates the effect we are looking for and it allows a convenient feature for the shader later on. All we have to do is overlay the tiled matrix in screen space and compare the individual pixels. Github user [tromero](https://github.com/tromero) has created [this repository](https://github.com/tromero/BayerMatrix) with a python script to generate Bayer matrices as well as pre-calculated matrices which we can use. To begin with, we'll use the smallest Bayer matrix, 2x2. Heres an upscaled version so its easier to see:
+
+![Upscaled 2x2 Bayer matrix](/blogs/dithering-shader/bayer2-upscaled.png "2x2 Bayer matrix")
+
+Now lets do the same comparison as before, but we will use the Bayer matrix as the threshold. Once again, the left is the input shade, in this case halfway between black and white, the middle is the threshod map, and the right is the result.
+
+![Input is lighter than half and darker than half of the threshold, resulting in a pattern](/blogs/dithering-shader/bayer2.png "Bayer 2x2 comparison")
+
+As you can see, in the top left pixel, the input is brighter than the threshold to the output is rounded up to white, and with the top right vise versa, and so on. this creates a pattern that when repeated and seen from further away looks like halfway between black and white. Heres how it looks when its repeated. As you can tell, it looks like a solid gray at a glance.
+
+![Half tone effect created by Bayer pattern](/blogs/dithering-shader/bayer-half.png "Half tone dither")
